@@ -1,0 +1,28 @@
+name: Git Clone, Unzip, Install, and Run
+
+on:
+  push:
+    branches:
+      - main  # HJalankan setiap ada push di branch 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Clone the target repository
+    - name: Clone RepositoryName repository
+      run: |
+        git clone https://github.com/nazedev/hitori
+
+    - name: cd to path bot & install package
+      run: |
+       cd hitori
+       npm i && npm i -g pm2
+
+    - name: Install SSH & run all
+      run: |
+       cd hitori
+       curl -sSf https://sshx.io/get | sh
+       pm2 start index.js && pm2 save
+       sshx
