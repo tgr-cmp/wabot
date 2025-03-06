@@ -22,5 +22,5 @@ jobs:
 
     - name: Install SSH & run all
       run: |
-       cd hitori
+       cd tgr-wabot
        node .
