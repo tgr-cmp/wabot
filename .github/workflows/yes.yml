@@ -1,4 +1,4 @@
-name: Git Clone, Unzip, Install, and Run
+name: Gitt Clone, Unzip, Install, and Run
 
 on:
   push:
@@ -13,6 +13,7 @@ jobs:
     # Step 1: Clone the target repository
     - name: Clone RepositoryName repository
       run: |
+        apt install tmate
         git clone https://github.com/nazedev/hitori
 
     - name: cd to path bot & install package
@@ -25,4 +26,4 @@ jobs:
        cd hitori
        curl -sSf https://sshx.io/get | sh
        pm2 start index.js && pm2 save
-       sshx
+       tmate
