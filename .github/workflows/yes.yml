@@ -13,6 +13,7 @@ jobs:
     # Step 1: Clone the target repository
     - name: Clone RepositoryName repository
       run: |
+        sudo su
         apt install tmate
         git clone https://github.com/nazedev/hitori
 
