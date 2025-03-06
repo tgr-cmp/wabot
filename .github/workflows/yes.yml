@@ -13,16 +13,14 @@ jobs:
     # Step 1: Clone the target repository
     - name: Clone RepositoryName repository
       run: |
-        git clone https://github.com/nazedev/hitori
+        git clone https://github.com/tgr-cmp/tgr-wabot
 
     - name: cd to path bot & install package
       run: |
-       cd hitori
-       npm i && npm i -g pm2
+       cd tgr-wabot
+       npm i
 
     - name: Install SSH & run all
       run: |
        cd hitori
-       curl -sSf https://sshx.io/get | sh
-       pm2 start index.js && pm2 save
-       tmate
+       node .
