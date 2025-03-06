@@ -1,4 +1,4 @@
-name: Gitt Clone, Unzip, Install, and Run
+name: Gittt Clone, Unzip, Install, and Run
 
 on:
   push:
